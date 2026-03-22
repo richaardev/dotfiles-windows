@@ -1,0 +1,10 @@
+{
+  "$schema": "./dotfiles.schema.json",
+  "links": [
+    {
+      "source": "git/config",
+      "target": "%USERPROFILE%/.gitconfig",
+      "type": "file"
+    }
+  ]
+}

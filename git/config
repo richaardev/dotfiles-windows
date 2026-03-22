@@ -1,0 +1,55 @@
+[core]
+  autocrlf = input  # keep newlines as in input
+  compression = 9  # trade cpu for network
+  fsync = none
+  whitespace = error  # threat incorrect whitespace as errors
+  preloadindex = true  # preload index for faster status
+
+[init]
+	defaultBranch = dev
+
+[user]
+	name = Richard Martins
+	email = me@richaar.dev
+	signingkey = "C:\\Users\\richaardev\\.ssh\\id_ed25519.pub"
+
+[gpg]
+  format = ssh
+
+[commit]
+	gpgsign = true
+  verbose = true
+
+[tag]
+  gpgsign = true
+
+[push]
+  autoSetupRemote = true
+  followTags = true
+  default = current
+
+[pull]
+  default = current
+	rebase = true
+
+[rebase]
+  autoStash = true
+  missingCommitsCheck = warn
+
+[pack]
+  threads = 0  # use all available threads
+  windowMemory = 1g  # use 1g of memory for pack window
+  packSizeLimit = 1g  # max size of a packfile
+
+[submodule]
+  fetchJobs = 16
+
+[log]
+  abbrevCommit = true  # short commits
+  graphColors = blue,yellow,cyan,magenta,green,red
+
+; [alias]
+;   vb = !"~/.config/lazygit/git-tag.sh"
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
