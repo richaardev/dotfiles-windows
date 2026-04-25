@@ -1,0 +1,42 @@
+add_newline = false
+command_timeout = 1000
+
+format = '''
+$os$username$directory$direnv$git_branch$nodejs$golang$rust$python$cmd_duration
+$character'''
+
+[character]
+success_symbol = '[λ](bold green)'
+error_symbol = '[λ](bold red)'
+
+[username]
+format = '[$user]($style) at '
+show_always = true
+
+[hostname]
+ssh_only = true
+format = '[$hostname](bold yellow) '
+
+[directory]
+home_symbol = '󰋜 ~'
+
+[git_branch]
+symbol = ''
+format = '[$symbol $branch]($style) '
+style = 'bold green'
+
+[nodejs]
+disabled = false
+
+[python]
+symbol = '👾 '
+pyenv_version_name = true
+
+[golang]
+symbol = ' '
+
+[cmd_duration]
+format = 'took [$duration](bold yellow)'
+min_time = 100
+show_milliseconds = true
+show_notifications = true
